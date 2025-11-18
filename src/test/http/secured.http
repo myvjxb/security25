@@ -1,0 +1,63 @@
+### GET All ITEMS
+GET http://localhost:8080/api/v1/kittens
+Authorization: Basic admin admin
+Accept: application/json
+###
+
+### GET 1 ITEM
+GET http://localhost:8080/api/v1/kittens/1
+Authorization: Basic admin admin
+Accept: application/json
+###
+
+### DEL 1 ITEM
+DELETE http://localhost:8080/api/v1/kittens/2
+Authorization: Basic admin admin
+Accept: application/json
+###
+
+### CREATE 1 ITEM
+POST http://localhost:8080/api/v1/kittens
+Authorization: Basic admin admin
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Mitten",
+  "description": "Smallest One"
+}
+###
+
+### UPD 1 ITEM
+PUT http://localhost:8080/api/v1/kittens
+Authorization: Basic admin admin
+Accept: application/json
+Content-Type: application/json
+
+{
+   "id": "2",
+  "name": "Bob",
+  "description": "Ginger"
+}
+###
+
+### GET
+GET http://localhost:8080/api/v1/kittens/user
+Authorization: Basic admin admin
+Accept: application/json
+Accept: text/plain
+###
+
+### GET
+GET http://localhost:8080/api/v1/kittens/admin
+Authorization: Basic admin admin
+Accept: application/json
+Accept: text/plain
+###
+
+### GET
+GET http://localhost:8080/api/v1/kittens/unknown
+Authorization: Basic admin admin
+Accept: application/json
+Accept: text/plain
+###
