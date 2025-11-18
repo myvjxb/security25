@@ -14,25 +14,25 @@ import java.util.List;
 */
 @Service
 @AllArgsConstructor
-public class ItemService {
+public class KittenService {
 
-    private final ItemRepository Repository;
+    private final KittenRepository Repository;
 
-    private List<Item> items;
+    private List<Kitten> kittens;
 
     @PostConstruct
     void init() {
-        items.add(new Item("1","name1","description"));
-        items.add(new Item("2","name2","description2"));
-        items.add(new Item("3","name3","description3"));
-        Repository.saveAll(items);
+        kittens.add(new Kitten("1","Mikki","Black"));
+        kittens.add(new Kitten("2","Minnie","White"));
+        kittens.add(new Kitten("3","Mouse","Brown"));
+        Repository.saveAll(kittens);
     }
 
-    public List<Item> getAll() {
+    public List<Kitten> getAll() {
         return Repository.findAll();
     }
 
-    public Item getById(String id) {
+    public Kitten getById(String id) {
         return Repository.findById(id).orElse(null);
     }
 
@@ -40,11 +40,11 @@ public class ItemService {
         Repository.deleteById(id);
     }
 
-    public Item create(Item item) {
-        return Repository.save(item);
+    public Kitten create(Kitten kitten) {
+        return Repository.save(kitten);
     }
 
-    public Item update(Item item) {
-        return Repository.save(item);
+    public Kitten update(Kitten kitten) {
+        return Repository.save(kitten);
     }
 }

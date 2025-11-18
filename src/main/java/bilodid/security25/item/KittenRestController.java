@@ -1,7 +1,6 @@
 package bilodid.security25.item;
 
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,28 +12,28 @@ import java.util.List;
 @since 18.11.2025 - 21.03
 */
 @RestController
-@RequestMapping("/api/v1/items")
+@RequestMapping("/api/v1/kittens")
 @AllArgsConstructor
-public class ItemRestController {
+public class KittenRestController {
 
-    private final ItemService service;
+    private final KittenService service;
 
     @GetMapping
-    public List<Item> getItems() {
+    public List<Kitten> getItems() {
         return service.getAll();
     }@GetMapping("/{id}")
-    public Item getOneItem(@PathVariable String id) {
+    public Kitten getOneItem(@PathVariable String id) {
         return service.getById(id);
     }@DeleteMapping("/{id}")
     public void delete(@PathVariable String id) {
         service.deleteById(id);
     }
     @PostMapping
-    public Item saveItem(@RequestBody Item item) {
-        return service.create(item);
+    public Kitten saveItem(@RequestBody Kitten kitten) {
+        return service.create(kitten);
     }
     @PutMapping
-    public Item update(@RequestBody Item item) {
-        return service.update(item);
+    public Kitten update(@RequestBody Kitten kitten) {
+        return service.update(kitten);
     }
 }

@@ -18,23 +18,23 @@ import org.springframework.data.annotation.Id;
 @Builder
 @ToString
 
-public class Item {
+public class Kitten {
 
     @Id
     private String id;
     private String name;
     private String description;
 
-    public Item(String name, String description) {
+    public Kitten(String name, String description) {
         this.name = name;
         this.description = description;
     }
 
     @Override
     public final boolean equals(Object o) {
-        if (!(o instanceof Item item)) return false;
+        if (!(o instanceof Kitten kitten)) return false;
 
-        return getId().equals(item.getId());
+        return getId().equals(kitten.getId());
     }
 
     @Override

@@ -11,5 +11,5 @@ import org.springframework.stereotype.Repository;
 @since 18.11.2025 - 21.02
 */
 @Repository
-public interface ItemRepository extends MongoRepository<Item, String> {
+public interface KittenRepository extends MongoRepository<Kitten, String> {
 }
