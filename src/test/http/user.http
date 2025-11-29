@@ -1,0 +1,10 @@
+### GET All KITTENS
+GET http://localhost:8080/api/v1/kittens
+Authorization: Basic user user
+Accept: application/json
+
+### GET ONE KITTEN
+GET http://localhost:8080/api/v1/kittens/user
+Authorization: Basic user user
+Accept: application/json
+Accept: text/plain
